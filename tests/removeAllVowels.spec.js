@@ -7,4 +7,8 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+  it('should remove vowels', function() {
+    var results = $filter('removeAllVowels')('matthewcianciolo');
+    expect(results).toEqual('mtthwcncl');
+  });
 });
